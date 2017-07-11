@@ -15,3 +15,16 @@
 ### state management and single source of truth concepts {#state-management-and-single-source-of-truth-concepts}
 
 ### Libraries vs Frameworks vs Applications {#libraries-vs-frameworks-vs-applications}
+
+### ECMA6 javascript 2017
+
+* #### Higher-order functions
+* #### JavaScript Arrays in Depth \(Map\)
+* #### Reduce Data with Javascript Array
+* #### Closures
+* #### Currying
+* #### Recursion
+* #### Promises
+
+
+
