@@ -17,6 +17,7 @@
   * [HTML](chapter_3/html.md)
   * [CSS](chapter_3/css.md)
   * [JavaScript](chapter_3/javascript.md)
+    * [ECMA6](chapter_3/javascript/ecma6.md)
   * [NodeJS](chapter_3/nodejs.md)
   * [Browser Tools](chapter_3/browser_tools.md)
   * [Package management tools](chapter_3/package_management_tools.md)
