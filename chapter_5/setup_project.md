@@ -2,8 +2,7 @@
 
 ### First Command-line usage {#first-command-line-usage}
 
-Open command line, and navigate to home folder where you want to save this course work (Desktop ?).
-
+Open command line, and navigate your course folder that your did setup in [Chapter 2](chapter_2/terminal_command_line.md))
 &gt;mkdir course-workspace
 
 &gt;cd course-workspace
