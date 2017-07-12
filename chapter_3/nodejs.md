@@ -112,16 +112,18 @@ I hope this what we are doing here is:-
     1.  req = request variable this will hold all information about the request sent from client browser to us
     2.  res = response variable this hold all information we will send back to the browser .
 
-![Screen%20Shot%202017-07-11%20at%202.05.20%20PM.png](../assets/screen20shot202017-07-1120at202.png)
-If you have read Chapter 1 Http you already understand that every Web http communication starts with a Client “browser in most cases” sending request to a server, and server responde back with response.
+
+If you have read [HTTP and DNS](chapter_1/http_and_dns.md) you already understand that every Web http communication starts with a Client “browser in most cases” sending request to a server, and server responde back with response.
 
 Lets run our 1<sup>st</sup> server and see what happen
 
+```bash
 Momens-MacBook-Air:node-server momen$ node ./index.js
-
-Example app listening on port http://localhost:8000!
+Server started on http://localhost:8000!
+```
 
 Now open browser to http://localhost:8000
+![Screen%20Shot%202017-07-11%20at%202.05.20%20PM.png](../assets/screen20shot202017-07-1120at202.png)
 
 Awesome our server is running and it give us “hello world”
 
