@@ -48,21 +48,16 @@ Now To Recommendations
 
 ### Basic recommended libraries for any reactjs Project {#basic-recommended-libraries-for-any-reactjs-project}
 
-*   **prop-types** “library used during react development, it was part of react but moved out to its own lib”
 *   **Immutable.js**
-*   **React-proptypes**
 *   **Redux**
+*   **Reselect** a function to create selector functions.
 *   **React-router**
+*   **prop-types** “library used during react development, it was part of react but moved out to its own lib”
+* **Moment.js** :- make manipulating Dates in js very easy and fun `moment().add(1,’day’).toCalendar()` //tomorrow at 7:30 am that was easy !!
+*   **apisauce** For ajax fetchs based on excellent axios lib.
 *   A **reset.css** library
     *   reset/normalize css are styles that remove cross browser differences in look of html
 *   A **react u.i. library** of your choice “react-toolbox, material-ui, react-bootstrap”
 *   **a css library** “bootstrap, Materialize css, Foundation, mdl” or any other of your choice !
-*   For ajax server communication I use &quot;**apisauce**” which is based on excellent axios lib.
 *   **Icons library** [&quot;font-awesome”, material-design-icons-iconfont, ionicons, or all of them !]
 *   **Airbnb-eslint-styles** or any eslint config you prefers.
-
-### Special case libraries I yet prefer to include them all in initial setup {#special-case-libraries-i-yet-prefer-to-include-them-all-in-initial-setup}
-
-*   Select :- Create advanced memorized selectors for your data –more about that later
-*   Moment.js :- make manipulating Dates in js very easy and fun moment.add(1,’day’).subtract(‘1’,’month’).toCalendar() //hurray!
-*   Lodash :- a collection of super-fast JavaScript helpers “slice and array, filter objects etc..”
