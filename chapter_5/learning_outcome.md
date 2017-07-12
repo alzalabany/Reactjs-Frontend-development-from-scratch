@@ -14,7 +14,6 @@ Our First App to build will be An Online Pharmacy drug index called Dawaya.
 *   Show eslint in action
 *   Show React.js abilities, how clean and powerful it can be
 *   Create our first GitHub repo to version our code
-  * Advantages of using Github in a project.
-
+  * [Advantages of using Github in a project](chapter_2/git_and_version_control_[concept,_installation,_us.md#advantages_of_git)
 
 
