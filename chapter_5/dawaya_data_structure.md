@@ -18,50 +18,28 @@ if you need to learn more about normalization google the concept, here are few k
 
 ### First Step, Check datatypes of Drug object {#first-step-check-datatypes-of-drug-object}
 
-1.  Activeingredient contain a list datatype, spited by \n,
-
-so let’s fix that by using js .split(‘\n’) function.
-
-1.  Good now look at list, each Ingredient entry contain
-
-2 information, ingredient name and concentration
-
-(1mg, 15mg etc.) so let’s fix that also
-
-1.  Now we need to apply rule 2, and remove redundant
-
-Data, Redundant data are data that can exists in
-
-More than 1 drug, “like company:Hikma” is string, this
-
-Should be moved to its own companies object and
-
-Replaced with Company_id
+1.  Activeingredient contain a list datatype, spited by \n, so let’s fix that by using js .split(‘\n’) function.
+2.  Good now look at list, each Ingredient entry contain 2 information, ingredient name and concentration (1mg, 15mg etc.) so let’s fix that also
+3.  Now we need to apply rule 2, and remove redundant Data
+    - Redundant data are data that can exists in More than 1 drug, “like company:Hikma” is string, this
+    - Should be moved to its own companies object and Replaced with Company_id
 
 Now Lets Pause and think of our database choices.
 
 Our Drug Object shape will now look like:-
-
+```javascript
 {
-
 id: 1,
-
 tradename: &quot;123 120ml&quot;,
-
 price: 10.5,
 
 company_id: 1, _//ref companies[1]_
-
 form_id: 1, _//ref forms[1]_
-
 size_id: 1, _//ref sizes[1]_
-
 group_id: 1 _//ref groups[1]_
-
 ingredients: [ 1, 2, 3 ] _//ref companies[1] &amp; [2] &amp; [2]_
-
 }
-
+```
 and now we should have 6 objects that hold data,
 
 drugs, companies, forms, sizes, groups, ingredients.
@@ -92,6 +70,8 @@ We first define a store variable that will hold our new database data, then fetc
 
 Now every time we want to recreate our database from remote origin, we only need to run
 
-*   *   *   node ./database-generator.js
+```bash
+node ./database-generator.js
+```
 
 And this command will do all work and give us a new drugs.json up to our standards.
