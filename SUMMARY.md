@@ -15,7 +15,7 @@
   * [Browser Tools](chapter_3/browser_tools.md)
   * [Package management tools](chapter_3/package_management_tools.md)
   * [Build tools](chapter_3/build_tools.md)
-  * [GIT and Version Control \[concept, installation, usage of Git\]](chapter_3/git_and_version_control_[concept,_installation,_us.md)
+  * [GIT and Version Control \[concept, installation, usage of Git\]](chapter_3/git.md)
   * [SSH \[concept, setup\]](chapter_3/ssh_[concept,_setup].md)
   * [Cloud vs Hosting \[shared, dedicated\]](chapter_3/cloud_vs_hosting_[shared,_dedicated].md)
 * [Chapter 3 Tools & Development Machine Setup](chapter_3/README.md)
