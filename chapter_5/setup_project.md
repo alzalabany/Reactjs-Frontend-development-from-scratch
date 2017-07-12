@@ -2,20 +2,19 @@
 
 ### First Command-line usage {#first-command-line-usage}
 
-Open command line, and navigate your course folder that your did setup in [Chapter 2](chapter_2/terminal_command_line.md))
-&gt;mkdir course-workspace
+Open command line, and navigate your course folder that your did setup in [Chapter 2 terminal setup ](chapter_2/terminal_command_line.md))
 
-&gt;cd course-workspace
+```bash
+cd course-workspace
+cd course-workspace
+create-react-app dawaya
+code .
+cd dawaya
+```
 
-&gt;create-react-app dawaya
+in above, we moved inside course-workspace folder, which we are useing to save all this course work from now on, 
 
-&gt;code .
-
-&gt;cd dawaya
-
-&gt;touch database-generator.js
-
-in above, we create course-workspace folder, which we will use to save all this course work from now on, navigate inside folder using cd, then created our first reactjs Application using create-react-app tool which we installed earlier in Chapter 2, then we launch vscode in root folder with “code .” command.
+`cd dawaya` will let us navigate inside reactjs folder folder, then created our first reactjs Application using create-react-app tool which we installed earlier in Chapter 2, then we launch vscode in root folder with “code .” command.
 
 ### Basic recommended libraries for any reactjs Project {#basic-recommended-libraries-for-any-reactjs-project}
 
