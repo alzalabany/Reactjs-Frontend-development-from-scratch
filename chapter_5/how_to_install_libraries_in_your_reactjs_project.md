@@ -20,13 +20,7 @@ to install all libraries in 1 command 1<sup>st</sup> open terminal and make sure
 yarn add apisauce font-font-awesome immutable Lodash material-design-icons-  awesome immutable Lodash material-design-icons-iconfont moment offline-plugin react react-dom react-redux react-router react-router-dom redux reselect sanitize.css
 ```
 
-Then to install Development dependencies *-libraries that will only be included during development and will not be included in production build-* use
-
-```bash
-
-yarn add -d prop-types eslint-config-airbnb;
-
-```
+Then to install Development dependencies *libraries that will only be included during development and will not be included in production build use* `yarn add -d prop-types eslint-config-airbnb`
 
 These two libraries are only usefull in debug mode, for this reasone i used the -d flag, no need to include them in production :) !
 
