@@ -1,4 +1,4 @@
-## Create Of first NodeJS based, Express Backend (15mins) {#create-of-first-nodejs-based-express-backend-15mins}
+# Create Our first NodeJS based, Express Backend (15mins) {#create-of-first-nodejs-based-express-backend-15mins}
 
 This will be a simple -one file- server.js that will consume drugs.json database and allow client to :-
 
