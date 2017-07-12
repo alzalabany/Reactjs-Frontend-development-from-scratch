@@ -27,6 +27,7 @@
       * [Promises](chapter_3/javascript/ecma6/promises.md)
       * [ES6/ES7 syntax](chapter_3/javascript/ecma6/syntax.md)
   * [NodeJS](chapter_3/nodejs.md)
+    * [Create backend server with Express](chapter_3/node/express.md)
   * [Browser Tools](chapter_3/browser_tools.md)
   * [Package management tools](chapter_3/package_management_tools.md)
   * [Build tools](chapter_3/build_tools.md)
