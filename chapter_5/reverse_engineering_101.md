@@ -1,4 +1,4 @@
-[](chapter_5/assets/dawayahome.pdf)## Reverse Engineering 101 {#reverse-engineering-101}
+## Reverse Engineering 101 {#reverse-engineering-101}
 
 ### What is Daweay.com/app ? {#what-is-daweay-com-app}
 
@@ -13,7 +13,11 @@
 *   Json although static file, the chose not to include it using a script tag, and use Angular Fetch to load the database once app is loaded. So you will see a spinner once app load this spinner will disappear once drugs.json file is downloaded
 *   It use the id of the drug to point to its picture “/drug-pic/[id].png”
 *   They have 11 colors in the website theme .. You can use http://bgrins.github.io/devtools-snippets/#allcolors snippet to extract colors used in any website !.
+![colors](./assets/colors.png "webapp colors")
 *   They cache the database.json file using service worker “this is why it’s called progressive web app because it can work offline as all static files are cached on client browser using service workers”
+
+|![drug information page](./assets/druginfo.png "drug information page")|![drug information page](./assets/dmodal.png "homepage modal")
+| --- |---|
 
 
 | Quest 1 |
