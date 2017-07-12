@@ -12,47 +12,49 @@ So finally, JavaScript developers are able to build more sophisticated applicati
 
 ### Command line tools with node.js {#command-line-tools-with-node-js}
 
-echo &gt; &quot;console.log(&#039;hello world&#039;);&quot; &gt; firstnode.js;
-
+```bash
+echo "console.log('hello world');" > firstnode.js;
 node ./firstnode.js;
+```
 
-the following 2 commands will create a firstnode.js file with “console.log” statement inside it, then it will tell node to execute it, this will print “hello world” message on console . This is an example of a application that hold no state “stateless application”, node will execute this file then will end since there is nothing more to do!, you can also create “Statefull apps” that keep running and maintain its own internal state “like express applications !” more on that later but for now.
+the following 2 commands will create a firstnode.js file with `console.log` statement inside it, then it will tell node to execute it, this will print “hello world” message on console . This is an example of a application that hold no state “stateless application”, node will execute this file then will end since there is nothing more to do!, you can also create “Statefull apps” that keep running and maintain its own internal state “like express applications !” more on that later but for now.
 
 Congratulations you have written your first node application!
 
 Lets extend this app so that it can become and let it echo back hello with your name !
 
 Open vscode to end firstnode.js file
-
+```bash
 code ./firstnode.js;
+```
 
 so how can we create a NodeJS app and pass arguments to it ? what we want is
-
+```c
 code ./firstnode.js name=momen age=32
-
-&gt;Hello momen, you are 32 years old awesome !
+Hello momen, you are 32 years old awesome !
+```
 
 [**https://nodejs.org/api/process.html#process_process_argv**](https://nodejs.org/api/process.html) **-nodejs official documentation-**
 
 these are times where platform documentation is your best friend, so according to docs lets edit our app and add following
-
+```javascript
 var args = {};
 
 process.argv.forEach(function (val, index, array) {
+  let parts = val.split('=');
 
-let parts = val.split(&#039;=&#039;);
-
-if(parts.length &gt; 1 &amp;&amp; ! args[parts[0]])
-
-args[parts[0]] = parts[1];
-
+  if(parts.length === 2 &&  !args[parts[0]])
+    args[parts[0]] = parts[1];
 });
 
 console.log(`Hello ${args.name}, you are ${args.age} years old awesome !`);
+```
 
 save and run this should output &gt;
 
+```shell
 Momens-MacBook-Air:course-workspace momen$ node ./firstnode.js name=momen age=32
+```
 
 Hello momen, you are 32 years old awesome !
 
@@ -71,58 +73,47 @@ Lets create our first Server: using “Express” [https://expressjs.com/](https
 Express is a thin layer on top of node, that allow you to create backend’s, Web applications, API’s, Resful servers, Microservices everything !.
 
 Lets start our first Express project from our command line as usual.
-
-Momens-MacBook-Air:course-workspace momen$ mkdir node-server
-
-Momens-MacBook-Air:node-server momen$ echo “console.log(123);” &gt; index.js
-
-Momens-MacBook-Air:node-server momen$ yarn add express
-
-Momens-MacBook-Air:course-workspace momen$ mkdir node-server
-
-Momens-MacBook-Air:course-workspace momen$ cd node-server
-
-Momens-MacBook-Air:node-server momen$ echo &quot;console.log(&#039;hello&#039;);&quot; &gt; index.js
-
-Momens-MacBook-Air:node-server momen$ node ./index.js
-
+```bash
+Momens-Air:course-workspace momen$ mkdir node-server
+Momens-Air:node-server momen$ echo “console.log(123);” > index.js
+Momens-Air:node-server momen$ yarn add express
+Momens-Air:course-workspace momen$ mkdir node-server
+Momens-Air:course-workspace momen$ cd node-server
+Momens-Air:node-server momen$ echo "console.log('hello');" > index.js
+Momens-Air:node-server momen$ node ./index.js
 hello
-
-Momens-MacBook-Air:node-server momen$ yarn add express
-
+Momens-Air:node-server momen$ yarn add express
 ✨  Done in 41.28s.
-
-Momens-MacBook-Air:node-server momen$ code ./index.js
+Momens-Air:node-server momen$ code ./index.js
+```
 
 Okay, now yarn will add express to our node_modules folder inside node-server folder we just created,
 
 Lets edit our index.js file now.
+```javascript
 
-const express = require(&#039;express&#039;)
-
+const express = require('express');
 const app = express();
 
-app.get(&#039;/&#039;, function (req, res) {
-
-res.send(&#039;Hello world&#039;);
-
+app.get('/', function (req, res) {
+  res.send("Hello world");
 })
 
 app.listen(8000, function () {
-
-console.log(&#039;Example app listening on port http://localhost:8000!&#039;)
-
+  console.log("Server started on http://localhost:8000!");
 })
+```
 
 I hope this what we are doing here is:-
 
 1.  import express library into variable we name it express
-2.  create our app by calling express(); we can pass any config we need to express function but for this simple server we just want default setting server, so we didn’t pass anything.
-3.  “app.get(‘/’ …“ line this tell the app that if a request where sent to the url / [the root path] call the function and give it 2 variables
+2.  create our app by calling `express()` we can pass any config we need to express function but for this simple server we just want default setting server, so we didn’t pass anything.
+3.  `app.get(‘/’ …` line this tell the app that if a request where sent to the url / [the root path] call the function and give it 2 variables
     1.  req = request variable this will hold all information about the request sent from client browser to us
     2.  res = response variable this hold all information we will send back to the browser .
 
-![Screen%20Shot%202017-07-11%20at%202.05.20%20PM.png](../assets/screen20shot202017-07-1120at202.png)If you have read Chapter 1 Http you already understand that every Web http communication starts with a Client “browser in most cases” sending request to a server, and server responde back with response.
+![Screen%20Shot%202017-07-11%20at%202.05.20%20PM.png](../assets/screen20shot202017-07-1120at202.png)
+If you have read Chapter 1 Http you already understand that every Web http communication starts with a Client “browser in most cases” sending request to a server, and server responde back with response.
 
 Lets run our 1<sup>st</sup> server and see what happen
 
