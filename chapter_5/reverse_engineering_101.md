@@ -16,6 +16,6 @@
 *   They cache the database.json file using service worker “this is why it’s called progressive web app because it can work offline as all static files are cached on client browser using service workers”
 
 
-| <center style="display:block;text-align:center;width:100%;">Quest 1</center> |
+| Quest 1 |
 | --- |
 | To keep things timed, and challenging, we will try to finish our |
