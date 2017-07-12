@@ -60,6 +60,10 @@ But Above all Database Normalization Solve main problems like.
 
 ### Final Database structure {#final-database-structure}
 
+|![final structure](./assets/final_structure.png) | ![final structure](./assets/final_structure2.png)|
+|-|-|
+
+
 ### Transform Dawaya Database to Our new format {#transform-dawaya-database-to-our-new-format}
 
 Todo this we can use Node.js to write our first automation tool.. let’s call it “database-generator.js” this file will be responsible for fetching Dawaya database, apply transformation of all drugs, and save our new drugs database into static drugs.json file inside our project
@@ -67,6 +71,7 @@ Todo this we can use Node.js to write our first automation tool.. let’s call i
 Go back to your vscode and create new file at root of dawaya folder, call it database-generator.js Copy past content from this course Chapter 5 exercise files, here’s a quick snapshot
 
 We first define a store variable that will hold our new database data, then fetch database from remote, loop over each drug and call DrugTransformFactory(item) to transform item to new shape. Finally we use node-fs library “fs short for file-system’ to write new database to ./src/drugs.json and also keep a copy of remote database as is in ./original_drugs.json.
+![final structure](./assets/transform.png)
 
 Now every time we want to recreate our database from remote origin, we only need to run
 
