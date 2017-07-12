@@ -1,0 +1,78 @@
+<h1 id="project-planning-and-management">Project planning and management</h1>
+<p>Any project starts with simple steps</p>
+<ul>
+<li>create User story back log</li>
+<li>create UI design any thing from a professional PSD designed by a professional designer or a simple powerpoint slide you do your self, or even a good old paper and pen sketch that you draw will do. but you <strong>must</strong> have a visual representation of the idea and of all user story board.</li>
+<li>distruct each user store into tasks backlog Her comes hairy part, you need to distruct each user story into small doable tasks, and assign them to a personal in you team. if you are working along, this is still no execuse to skip this point, just create all tasks and assign them to your self.</li>
+</ul>
+<h2 id="pro-tips">Pro Tips</h2>
+<ul>
+<li>use github branchs to organize your tasks</li>
+<li>use numbered list to order all your tasks, and sub nest list under every branch name for example check <a href="chapter_5/plan_our_app_and_features">chapter 5 planning</a></li>
+</ul>
+<p>a good plan can looks like</p>
+<ul>
+<li>User story backlog</li>
+<li>a user can login using his email and password</li>
+<li>a user can reset his password using email</li>
+<li>a user can create new account using [email, password]</li>
+<li>a user can verify his email after registration using email token</li>
+<li>Tasks backlog</li>
+<li>Master branch
+<ul>
+<li>create UI sketch design</li>
+<li>distruct design into routes, and component list and document them in project root README.md file</li>
+<li>create proper file structure *task description : .... etc should list all files and folder under every task you should specify details, tutorials links anything that will help person assigned to do his task</li>
+<li>layout-design branch</li>
+<li>create 3 columns layout with center column stretched as per design</li>
+<li>create login box html &amp; css</li>
+<li>create reset password box html &amp; css</li>
+<li>create account acctivation box html &amp; css</li>
+<li>login-behaviour branch</li>
+<li>create login actions
+<ul>
+<li>login</li>
+<li>validate login info and return errors if any.</li>
+</ul></li>
+<li>create reset password
+<ul>
+<li>validate email and send to server.</li>
+<li>if a reset token present in url, then validate the token</li>
+<li>if user has valid token then show create new password inputs.</li>
+</ul></li>
+<li>create account acctivation box html &amp; css in scope of Reactjs every feature you can break tasks of creating any react app into following.</li>
+</ul></li>
+</ul>
+<p>in above example, team should wait for work on master to finish, then 2 teams will split and branch our of master while they work on there own tasks. every task should be destructred as small as possible, and any discription should be attached.</p>
+<p>following lets see how we do these in react scope world.</p>
+<hr />
+<ul>
+<li>create components list required to build this ui, -<a href="../chapter_3/jsx.md">remember the JSX rules we mentioned before</a>-</li>
+<li>list all actions and user interactions as capitalized / separated list <a href="../chapter_5/plan_our_app_ui_and_features.md">chapter 5 planning for example</a>, these lists will construct your redux action TYPES in future.</li>
+<li>[FEATURE]/[ACTION]/[OPTIONAL INFO] (params you will pass in action) remember to always start and end with /, just like namespacing concept in some programming languages :).
+<ul>
+<li>Example</li>
+<li>/LOGIN/GET_INFO/</li>
+<li>/LOGIN/VALIDATED_CREDENTIALS/ (usernmae, password)</li>
+<li>/LOGIN/VALIDATE_DATA/ (usernmae, password)</li>
+<li>/LOGIN/LOGOUT/</li>
+<li>/LOGIN/RESET/SEND_EMAIL/</li>
+<li>/LOGIN/RESET/VALIDATE_TOKEN/ (email, token)</li>
+<li>etc..</li>
+</ul></li>
+<li>now save this list in your readme.md file inside feature/app folder, keep it in same raw format it will be very usefull as a seed for documentation, and to convert it into constants, functions with names</li>
+<li>implement all components UI, don't even bother with behaviour at this point, you only want a static good looking app that meets the product manager requirements. -if your app use data that it will fetch from remote website, use static list that mock the data you will get from remote host for now. we are only concerned with UI and UX at this phase</li>
+<li>create all CONSTANTS, TYPES, ACTIONS needed.</li>
+<li>create all reducers that will handle those actions.</li>
+<li>If you are the one who will create backend, now is a good time to do it !, make sure backend endpoints return same data in same shape as your current static lists in your app.</li>
+<li>replace static lists with actual remote fetch calls if they are from remote origin, or by connecting your component and getting data from redux store.</li>
+<li>Grap a cup of coffee and celebrate ! your have finished work :) !</li>
+<li>Finish by making sure all your code is Clean and properly Documented.</li>
+</ul>
+<p>in above list, you can split tasks into :</p>
+<ul>
+<li>Design work from *3</li>
+<li>4,5,7,8,9 Frontend work</li>
+<li>6 Backend work</li>
+</ul>
+<p>in a proper team setup, all your 3 teams can even work on parallel, none. the only show stopper that during your planning phases you should be already <strong>Set</strong> with the shape of data that the server will return to the client, this is essential for frontend, designers and backend teams to be able to plan how they will impelement and handle such data.</p>
