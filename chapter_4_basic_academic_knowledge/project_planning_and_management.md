@@ -14,7 +14,39 @@ if you are working along, this is still no execuse to skip this point, just crea
   1. use github branchs to organize your tasks
   2. use numbered list to order all your tasks, and sub nest list under every branch name for example check [chapter 5 planning](chapter_5/plan_our_app_and_features)
 
-in scope of Reactjs every feature you can break tasks of creating any react app into following.
+a good plan can looks like
+
+* User story backlog
+  * 1. a user can login using his email and password
+  * 2. a user can reset his password using email
+  * 3. a user can create new account using [email, password]
+  * 4. a user can verify his email after registration using email token
+* Tasks backlog
+  * Master branch
+    1. create UI sketch design
+    2. distruct design into routes, and component list and document them in project root README.md file
+    3. create proper file structure
+    *task description : .... etc should list all files and folder under every task you should specify details, tutorials links anything that will help person assigned to do his task
+    * layout-design branch
+      1. create 3 columns layout with center column stretched as per design
+      2. create login box html & css
+      3. create reset password box html & css
+      4. create account acctivation box html & css
+  * login-behaviour branch
+    1. create login actions
+      1. login
+      2. validate login info and return errors if any.
+    2. create reset password
+      1. validate email and send to server.
+      2. if a reset token  present in url, then validate the token
+      3. if user has valid token then show create new password inputs.
+    3. create account acctivation box html & css in scope of Reactjs every feature you can break tasks of creating any react app into following.
+
+in above example, team should wait for work on master to finish, then 2 teams will split and branch our of master while they work on there own tasks.
+every task should be destructred as small as possible, and any discription should be attached.
+
+following lets see how we do these in react scope world.
+----
 
 1. create components list required to build this ui, -remember the JSX rulles we mentioned before-
 2. list all actions and user interactions as capitalized / separated list [chapter 5 planning for example](chapter_5/plan_our_app_and_features), these lists will construct your redux action TYPES in future.
