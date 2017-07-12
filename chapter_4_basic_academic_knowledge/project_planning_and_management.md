@@ -32,15 +32,15 @@ a good plan can looks like
       2. create login box html & css
       3. create reset password box html & css
       4. create account acctivation box html & css
-  * login-behaviour branch
-    1. create login actions
-      1. login
-      2. validate login info and return errors if any.
-    2. create reset password
-      1. validate email and send to server.
-      2. if a reset token  present in url, then validate the token
-      3. if user has valid token then show create new password inputs.
-    3. create account acctivation box html & css in scope of Reactjs every feature you can break tasks of creating any react app into following.
+    * login-behaviour branch
+      1. create login actions
+        1. login
+        2. validate login info and return errors if any.
+      2. create reset password
+        1. validate email and send to server.
+        2. if a reset token  present in url, then validate the token
+        3. if user has valid token then show create new password inputs.
+      3. create account acctivation box html & css in scope of Reactjs every feature you can break tasks of creating any react app into following.
 
 in above example, team should wait for work on master to finish, then 2 teams will split and branch our of master while they work on there own tasks.
 every task should be destructred as small as possible, and any discription should be attached.
@@ -48,9 +48,9 @@ every task should be destructred as small as possible, and any discription shoul
 following lets see how we do these in react scope world.
 ----
 
-1. create components list required to build this ui, -remember the JSX rulles we mentioned before-
+1. create components list required to build this ui, -[remember the JSX rules we mentioned before](chapter_3/jsx.md)-
 2. list all actions and user interactions as capitalized / separated list [chapter 5 planning for example](chapter_5/plan_our_app_and_features), these lists will construct your redux action TYPES in future.
-3. implement all components UI, don't even bother with behaviour at this point, you only want a static good looking app that meat requirements. -if your app use data that it will fetch from remote website, use static list that mock the data you will get from remote host for now. we are only concerned with UI and UX at this phase
+3. implement all components UI, don't even bother with behaviour at this point, you only want a static good looking app that meets the product manager requirements. -if your app use data that it will fetch from remote website, use static list that mock the data you will get from remote host for now. we are only concerned with UI and UX at this phase
 4. create all CONSTANTS, TYPES, ACTIONS needed.
 5. create all reducers that will handle those actions.
 6. If you are the one who will create backend, now is a good time to do it !, make sure backend endpoints return same data in same shape as your current static lists in your app.

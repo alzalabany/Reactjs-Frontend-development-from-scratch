@@ -32,15 +32,6 @@ We also used **flexible boxes Css “display: flex”** this is new to css, but 
 
 Now before we continue further we need to agree on rules to keep our JSX clean and reusable
 
-### JSX Rules {#jsx-rules}
-
-1.  Maximum 2 level nesting, if you nest to much this mean you need to split your code into presentational components, this will help having cleaner and easier to maintain and extend code.
-2.  Inline style over css classes
-3.  Group inline styles into styles.js
-4.  If you don’t need state use stateless
-5.  Always use proptypes &amp; defaultProps
-6.  Document you work.. Always
-7.  _Import Btn from ‘lib/btn’_ over _import {btn} from ‘lib’_ to allow webpack to do tree shaking and code splitting automatically without any custom configuration.
 
 More components , now we need 6 more components 1 for each filter ,
 
