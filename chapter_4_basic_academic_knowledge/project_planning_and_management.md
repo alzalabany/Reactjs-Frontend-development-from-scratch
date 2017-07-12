@@ -12,7 +12,7 @@ Her comes hairy part, you need to distruct each user story into small doable tas
 if you are working along, this is still no execuse to skip this point, just create all tasks and assign them to your self.
 **Pro Tips** 
   1. use github branchs to organize your tasks
-  2. use numbered list to order all your tasks, and sub nest list under every branch name for example check [chapter 5 planning](/chapter_5/plan_our_app_and_features)
+  2. use numbered list to order all your tasks, and sub nest list under every branch name for example check [chapter 5 planning](chapter_5/plan_our_app_and_features)
 
 a good plan can looks like
 
@@ -48,8 +48,8 @@ every task should be destructred as small as possible, and any discription shoul
 following lets see how we do these in react scope world.
 ----
 
-1. create components list required to build this ui, -[remember the JSX rules we mentioned before](/chapter_3/jsx.md)-
-2. list all actions and user interactions as capitalized / separated list [chapter 5 planning for example](/chapter_5/plan_our_app_and_features), these lists will construct your redux action TYPES in future.
+1. create components list required to build this ui, -[remember the JSX rules we mentioned before](chapter_3/jsx.md)-
+2. list all actions and user interactions as capitalized / separated list [chapter 5 planning for example](chapter_5/plan_our_app_and_features), these lists will construct your redux action TYPES in future.
 3. implement all components UI, don't even bother with behaviour at this point, you only want a static good looking app that meets the product manager requirements. -if your app use data that it will fetch from remote website, use static list that mock the data you will get from remote host for now. we are only concerned with UI and UX at this phase
 4. create all CONSTANTS, TYPES, ACTIONS needed.
 5. create all reducers that will handle those actions.
