@@ -3,7 +3,6 @@
 * [Reactjs Frontend development from scratch](README.md)
 * [Chapter 1 Introduction To web development](chapter_1/README.md)
   * [History Part I - Where It Began, 1990’s web development](chapter_1/history_part_i_-_where_it_began,_1990s_web_develop.md)
-  * [Programming Knowledges is incremental](chapter_1/programming_knowledges_is_incremental.md)
   * [Rise of web development in early 2000’s](chapter_1/rise_of_web_development_in_early_2000s.md)
   * [Client Side ](chapter_1/client_side.md)
   * [Server Side](chapter_1/server_side.md)

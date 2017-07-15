@@ -19,7 +19,7 @@ Momens-Air:node-server momen$ echo "console.log('hello');" > index.js
 Momens-Air:node-server momen$ node ./index.js
 hello
 Momens-Air:node-server momen$ yarn add express
-✨  Done in 41.28s.
+✨ Done in 41.28s.
 Momens-Air:node-server momen$ code ./index.js
 ```
 
@@ -32,22 +32,21 @@ const express = require('express');
 const app = express();
 
 app.get('/', function (req, res) {
-  res.send("Hello world");
+ res.send("Hello world");
 })
 
 app.listen(8000, function () {
-  console.log("Server started on http://localhost:8000!");
+ console.log("Server started on http://localhost:8000!");
 })
 ```
 
 I hope this what we are doing here is:-
 
-1.  import express library into variable we name it express
-2.  create our app by calling `express()` we can pass any config we need to express function but for this simple server we just want default setting server, so we didn’t pass anything.
-3.  `app.get(‘/’ …` line this tell the app that if a request where sent to the url / [the root path] call the function and give it 2 variables
-    1.  req = request variable this will hold all information about the request sent from client browser to us
-    2.  res = response variable this hold all information we will send back to the browser .
-
+1. import express library into variable we name it express
+1. create our app by calling `express()` we can pass any config we need to express function but for this simple server we just want default setting server, so we didn’t pass anything.
+1. `app.get(‘/’ …` line this tell the app that if a request where sent to the url / [the root path] call the function and give it 2 variables
+  * req = request variable this will hold all information about the request sent from client browser to us
+  * res = response variable this hold all information we will send back to the browser .
 
 If you have read [HTTP and DNS](chapter_1/http_and_dns.md) you already understand that every Web http communication starts with a Client “browser in most cases” sending request to a server, and server responde back with response.
 
@@ -66,7 +65,7 @@ Awesome our server is running and it give us “hello world”
 Now lets add another route to our server
 ```javascript
 app.get('/:name', function (req, res) {
-  res.send('Hello Mr. '+req.params.name);
+ res.send('Hello Mr. '+req.params.name);
 })
 ```
 
@@ -105,25 +104,25 @@ const app = express();
 const names = []; // Note we added a new variable, this will hold all names that visited our server
 
 app.get('/', function (req, res) {
-  res.send('Hello world');
+ res.send('Hello world');
 })
 
 app.get('/:name', function (req, res) {
-  res.send('Hello Mr. '+req.params.name);
+ res.send('Hello Mr. '+req.params.name);
 })
 
 // This is the new route, it will echo our Greeting for you, and tell you who else visited
 // This server since you started it!. –this is what is meant by stateful, that application can
 // keep variables defined while its running, and can use this State to answer all requests.
 app.get('/history/:name', function (req, res) {
-  res.send(
-    'Hello Mr. '+req.params.name + '&lt;hr/&gt;&lt;h1&gt;history&lt;/h1&gt;' + names.join('&lt;br/&gt;')
-  );
-  names.push(req.params.name+ ' : visited at '+ new Date().toLocaleDateString('en-GB'));
+ res.send(
+  'Hello Mr. '+req.params.name + '&lt;hr/&gt;&lt;h1&gt;history&lt;/h1&gt;' + names.join('&lt;br/&gt;')
+ );
+ names.push(req.params.name+ ' : visited at '+ new Date().toLocaleDateString('en-GB'));
 })
 
 app.listen(8000, function () {
-  console.log('Example app listening on port http://localhost:8000!')
+ console.log('Example app listening on port http://localhost:8000!')
 })
 ```
 
