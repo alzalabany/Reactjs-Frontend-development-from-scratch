@@ -1,10 +1,23 @@
 # Frontend React.js Client
 
+planning a reactjs client falls into 2 parts,
+
+| Client Deisgn | State Management |
+|:--:|:--:|
+| routes, components, ui&ux | this is like database design but for frontend.|
+
+for best maintaince you need to create a definative separation between 
+
+1. the parts of the app that will handle getting data from api, and saving it, and manipulating the data (state management)
+2. the parts of the app thats going to present such data for user (ui)
+
+
 ## Step 2 Task break down
 
 if you have read [Project planning and management](chapter_4/project_planning_and_management.md) you already know how this will go.
 
-## A. create components list and folder structure
+### A. create components list and folder structure
+
 * project root
   * delete all files inside /src to start clean :). we dont need create-react-app demos.
   * index.js --> app entry and setup
@@ -12,22 +25,17 @@ if you have read [Project planning and management](chapter_4/project_planning_an
   * createStore.js --> create Redux store;
   * api.js --> setup our apisauce Fetch in this file,
   * rootReducer.js --> our main redux reducer file
-  * autoFetch.js --> will create a simple component that will autoamticly fetch new drug data every time any of the drugs filter changes. this way we dont need to worry about API anymore ! it will happen autoamticly.
   * contstants.js --> app configs and constants
   * styles.js --> app main styles
   * actions.js --> app common redux actions
+  * tools.js --> will contain help functions
+  * sw.js --> service worker we will use to cache api requests
 * sidebar
   * Filters /src/filters/index.js
     * Price /src/filters/priceFilter.js
     * Tradename /src/filters/name.js
     * OrderBy /src/filters/orderby.jsƒ
-    * company /src/filters/companies.js
-    * form /src/filters/forms.js
-    * group /src/filters/groups.js
-    * Ing /src/filters/ingredients.js
-    * \<Select \/\> Select dropdown with search input component /src/components/Select.js
-    * Tree Like list with checkboxs /src/components/Tree.js
-    * The last 2 components are presentational components that will be reused by some of our filters
+    * Tree Like list with checkboxs /src/components/Tree.js will be used in all other filters
 * main-content-area
   * Header /src/main-area/header.js
   * Statistics /src/main-area/stats.js
@@ -35,17 +43,44 @@ if you have read [Project planning and management](chapter_4/project_planning_an
   * List /src/main-area/drugList.js
   * Index /src/main-area/index.js this is where we will glue all above parts together to compose main content area
 
-#### B. List All Actions
+### B. List All Actions and webapp behaviours
 
 * /ROOT/DRUGS/LOAD_DRUGS/
+* /ROOT/DRUGS/LOAD\_MORE\_DRUGS/
 * /ROOT/FILTER/UPDATE/ (key, value)
 * /ROOT/FILTER/CLEAR/
 
-Thats it, our simple app have only 3 behaviours ! 
+Thats it, our simple app have only 3 behaviours
 
-* 1st to fetch drugs from api. 
+* 1st to fetch drugs from api and save it in our store
 * 2nd to set a filter and its value
 * 3rd to clear all filters.
+
+so our state will look like this
+
+```json
+{
+  show_sidebar: true,
+  db:{
+    .. clone from server db
+  },
+  filters:{
+    name: [], // array of strings, contain keywords to search for drug.
+    price: [0,0],
+    groups: [],
+    forms: [],
+    // ..etc all filters will hold an array of ids
+    keys: [], // list of keys of drugs to show on right side, this will update everytime db/filters changes, its a computed value so it shouldnt be in state, but we will leave it for now just for sake of simplicity
+  },
+  router:{} // will contain react-router location information, this key is handled by react-router-redux
+}
+```
+
+and our routes will be
+
+1. / -> show list of drugs
+2. /:id -> show details of a specfic drug
+3. /list/:type/:id => show all drugs of a /type, group, form, company etc
 
 #### C. implement all components UI (this is first Task.)
 
@@ -57,9 +92,9 @@ Thats it, our simple app have only 3 behaviours !
   mkdir ./src && ./src/main-area && mkdir ./src/filters && mkdir ./src/components
   cd ./src
   touch index.js app.js api.js rootReducer.js createStore.js autoFetch.js
-  cd ./src/components
-  touch Select.js Tree.js index.js
-  cd ../filters
+  cd ./src/components;
+  touch Select.js Tree.js index.js;
+  cd ../filters;
   touch index.js priceFilter.js nameFilter.js companyFilter.js groupFilter.js #...etc
 ```
 
@@ -89,9 +124,9 @@ search for `(.*)/([A-Z_]+)/` and replace it with `exports.types.$2 = "$1/$2/";` 
 list should now be converted into
 
 ```javascript
-exports.types.LOAD_DRUGS = "/ROOT/DRUGS/LOAD_DRUGS/";
-exports.types.UPDATE = "/ROOT/FILTER/UPDATE/";
-exports.types.CLEAR = "/ROOT/FILTER/CLEAR/";
+/ROOT/DRUGS/LOAD_DRUGS/
+/ROOT/FILTER/UPDATE/
+/ROOT/FILTER/CLEAR/
 ```
 
 see how easy this was :), this is why i keep a list of all behaviours in a readme file, so that i can use this list to generate boilerplate code in future :)
@@ -164,6 +199,7 @@ Answer to this is no, i will prefer to handle cache inside the server-worker, ad
 Thans it we have all our reducers. lets create our root reducer :)
 
 inside ./src/rootReducer.js
+
 ```javascript
 import { drugsReducer } from './main-area/reducer.js'
 import { filtersReducer } from './filters/reducer.js'
@@ -180,10 +216,9 @@ const reducers = {
 }
 
 export default function rootReducer(state=initialState, action){
-  let newState = state;
-  Object.keys(initialState).map(key=>{
-    newState = 
-  })
+  return Object.keys(reducers).reduce(
+    (carry,key)=>reducers[key](carry, action)
+    , initialState);
 }
 
 ```
