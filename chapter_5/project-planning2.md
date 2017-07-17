@@ -80,6 +80,7 @@ and our routes will be
 
 1. / -> show list of drugs
 2. /:id -> show details of a specfic drug
+3. /list/:type => show list of a /:type, all group, form, company etc that match filter props
 3. /list/:type/:id => show all drugs of a /type, group, form, company etc
 
 #### C. implement all components UI (this is first Task.)
@@ -89,27 +90,34 @@ and our routes will be
 
 ```shell
   rm -rf ./src
-  mkdir ./src && ./src/main-area && mkdir ./src/filters && mkdir ./src/components
+  mkdir ./src && ./src/main-area && mkdir ./src/filters && mkdir ./src/drug && mkdir ./src/lists
   cd ./src
-  touch index.js app.js api.js rootReducer.js createStore.js autoFetch.js
-  cd ./src/components;
-  touch Select.js Tree.js index.js;
-  cd ../filters;
-  touch index.js priceFilter.js nameFilter.js companyFilter.js groupFilter.js #...etc
+  touch index.js app.js api.js rootReducer.js createStore.js tools.js constants.js styles.js sw.js index.css
+  cd ./main-area
+  touch index.js DrugsList.js LinkCmp.js reducer.js actions.js
+  cd ../sidebar;
+  touch index.js priceFilter.js TreeCmp.js reducer.js actions.js
+  cd ../drug
+  touch index.js
+  cd ../lists
+  touch index.js ListCmp.js
 ```
+
+these commands will create all folders and empty files that we will use in our app
 
 carry on and create all files we listed in step A. final structure of project should look like following:-
 
-[PIcture of vscode will all files and folders created]()
+![PIcture of vscode will all files and folders created](./assets/struct.png "Project Folder structure")
 
 now we need to setup github.
 
 1. cd back to your daway project root
 1. initiate your git repo `git init`
 1. commit and push our project `git add . && git commit -m"initial commit" && git push`
-1. branch out to design-layout `git branch -b layout-design` in this branch we will create all our ui
+1. branch out to design-layout `git checkout -b layout-design` in this branch we will create all our ui
 
-Thats it, its straight simple app with only 4 behaviours !, lets save the above list at /src/readme.md so that we can use later.
+Thats it, its straight simple app, now that you have all your folders and files you can assign diffeent team members to work on every part. draw a dependency graph that link every realted components together.
+then you can assign these independent parts to different team members if you have.
 
 [open your vscode and lets code, please check my screen cast for how we implemented the ui](https://youtube.com/alzalabany/reactjs-cours "momen's yourtube")
 
@@ -143,87 +151,27 @@ exports.types.CLEAR = "/ROOT/FILTER/CLEAR/";
 export default exports;
 ```
 
-### create all reducers that will handle those actions.
-
-we will use the types we export in constants, lets create reduer inside every domain.
-
-create 2 reducers files `touch ./src/main-area/reducer.js ./src/filters/reducer.js`
-
-open filters reducer and enter following
-```javascript
-import {Map, Record, List} from 'immutable';
-import { types } form '../constants';
-
-const filtersShape = Record({
-  name: String(''),
-  price: List([0,1]),
-  groups: Map({}),
-  forms: Map({}),
-  company: Map({}),
-  ingredients: Map({}),
-})
-
-export const initialState = new filtersShape({});
-
-export function filtersReducer(state = initialState, action){
-  if(action.type === '/ROOT/FILTER/CLEAR/') return initialState;
-
-  if(action.type === '/ROOT/FILTER/UPDATE/') return state.set(action.key, action.value);
-  
-  return state;
-}
-```
-
-Thats simple, next reducer is Drugs reducer, this one will update our store with new data that arrives from server.
-
-add this reducer to `main-area/reducer.js`
-
-```javascript
-import {Map} from 'immutable'
-
-export function drugsReducer(state={}, action){
-  if(action.type === '/ROOT/DRUGS/LOAD_DRUGS/') return Map(action.payload);
-  
-  return state;
-}
-```
-
 one thing we need to consider is cacheing !. how are we going to cache requests ? should we do it in application logic ?
 
-Answer to this is no, i will prefer to handle cache inside the server-worker, advantages of this
+there is 2 things that can go wrong when getting data from your api and saving it to store.
+
+1. Overfetching
+  * this mean that you fetch data too frequent even though you already have data that your app needs
+2. Underfetching
+  * you fetch data in response to certain triggers that **can** in a certain senario lead to your app seek some data from local store and not find it because your app did not fetch such data from db.
+
+
+so for this app. i will prefer to handle cache inside the server-worker, advantages of this
 
 1. easier implementation, drugsReducer now dont need to merge new data
 1. service-worker runs on another thread, so our app will now be utlizing multiple threads, which will give a greate bonuce performance
 1. its very easy to setup caching in service-workers. way easier than amount of hacking required if we where to implement this in react-redux.
+1. will allow us to go with **Overfetching** wihout worrying toomuch about wasting data traffic, since our service worker will handle these requests on client side without hitting our server.
 
 Thans it we have all our reducers. lets create our root reducer :)
 
 inside ./src/rootReducer.js
 
-```javascript
-import { drugsReducer } from './main-area/reducer.js'
-import { filtersReducer } from './filters/reducer.js'
-import { Record } from 'immutable';
 
-const initialState = new Record({
-  drugs: drugsReducer(underfined,{type:'@@getInitialShape'}),
-  filters: filtersReducer(underfined,{type:'@@getInitialShape'}),
-});
 
-const reducers = { 
-  drugs: drugsReducer,
-  filters: filtersReducer,
-}
-
-export default function rootReducer(state=initialState, action){
-  return Object.keys(reducers).reduce(
-    (carry,key)=>reducers[key](carry, action)
-    , initialState);
-}
-
-```
-
-* If you are the one who will create backend, now is a good time to do it !, make sure backend endpoints return same data in same shape as your current static lists in your app.
-* replace static lists with actual remote fetch calls if they are from remote origin, or by connecting your component and getting data from redux store.
-* Grap a cup of coffee and celebrate ! your have finished work :) !
-* Finish by making sure all your code is Clean and properly Documented.
+you can view all source code @ [https://github.com/alzalabany/course-frontend.git](https://github.com/alzalabany/course-frontend.git "Course full project");
