@@ -12,5 +12,3 @@ following chapters we will be -more or less- diving into details of what we did 
 
 Your Feedback, sponsoring, and contribution is most welcomed 
 
-https://drive.google.com/file/d/0B8EyamBo4JPRakdacTE4dlhHLWs/view
-
