@@ -41,10 +41,11 @@ React is not the react.js Library, its the Collection of other libraries that yo
 
 for this reason you will hear people saying that learning react is easy, yet this is not true !.
 
-if you mean learning React.js its self alone, then yes its easy, but you cannot create anything useful with react.js alone ! to create a webapp using react you will probably need few more libraries like
+if you mean learning React.js its self alone, then yes its easy, in fact at time or writting this book, react own api contains only couple functions, but you cannot create anything useful with react.js alone ! to create a webapp or pwa -progressive web application- using react you will probably need few more libraries like
 
 * React Router :- which handle browser/mobile app routing for your app
 * Redux :- Any modern react.js app should be based on State magament concept of Redux/flux architutcture
+* Saga: R[edux Saga](https://redux-saga.js.org) is one of the most famous saga design pattern implementations in react, if your are a fan of reactive programming, redux-saga can make your app a lot better structured and easier to reason about.
 * Immutable.js :- Provide Blazing fast Data Structrures and immutability functions that are missing from native javascript
 
   * ordered Lists
