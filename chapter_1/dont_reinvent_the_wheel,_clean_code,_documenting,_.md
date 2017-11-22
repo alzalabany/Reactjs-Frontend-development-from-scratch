@@ -1,5 +1,4 @@
-# Don’t reinvent the wheel, Clean Code, Documenting, &amp; Testing {#don-t-reinvent-the-wheel-clean-code-documenting-testing}
-
+# Don’t reinvent the wheel, Clean Code, Documenting, & Testing {#don-t-reinvent-the-wheel-clean-code-documenting-testing}
 
 Difference between Low Level and High Level programming.
 
@@ -12,3 +11,7 @@ for this reasons
 * Develop Libraries and reusable codes
 * Clean Code and Documentation
 * Testing Type, engines, and the Why of testing ?
+* How To keep you code documented, type of documentaions JS-docs, swagger, DocBlock
+
+
+
