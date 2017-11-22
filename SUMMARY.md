@@ -1,6 +1,9 @@
 # Summary
 
 * [Reactjs Frontend development from scratch](README.md)
+* [Chapter 0 What is this book](chapter-0-what-is-this-book.md)
+  * [Contributors](chapter-0-what-is-this-book/contributers.md)
+  * [Licensing](chapter-0-what-is-this-book/licensing.md)
 * [Chapter 1 Introduction To web development](chapter_1/README.md)
   * [History Part I - Where It Began, 1990’s web development](chapter_1/history_part_i_-_where_it_began,_1990s_web_develop.md)
   * [Rise of web development in early 2000’s](chapter_1/rise_of_web_development_in_early_2000s.md)
@@ -9,7 +12,6 @@
   * [HTTP and DNS](chapter_1/http_and_dns.md)
   * [Browsers](chapter_1/browsers.md)
   * [Don’t reinvent the wheel, Clean Code, Documenting, & Testing](chapter_1/dont_reinvent_the_wheel,_clean_code,_documenting,_.md)
-* [Chapter 0 What is this book](chapter-0-what-is-this-book.md)
 * [Chapter 2 Tools & Development Machine Setup](chapter_2/README.md)
   * [Terminal command line](chapter_3/terminal_command_line.md)
   * [Browser Tools](chapter_3/browser_tools.md)
