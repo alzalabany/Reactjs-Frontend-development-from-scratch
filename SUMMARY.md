@@ -9,6 +9,7 @@
   * [HTTP and DNS](chapter_1/http_and_dns.md)
   * [Browsers](chapter_1/browsers.md)
   * [Don’t reinvent the wheel, Clean Code, Documenting, & Testing](chapter_1/dont_reinvent_the_wheel,_clean_code,_documenting,_.md)
+* [Chapter 0 What is this book](chapter-0-what-is-this-book.md)
 * [Chapter 2 Tools & Development Machine Setup](chapter_2/README.md)
   * [Terminal command line](chapter_3/terminal_command_line.md)
   * [Browser Tools](chapter_3/browser_tools.md)
@@ -62,6 +63,5 @@
   * [Setup PHP7 And create your first Rest API](chapter_7/setup_php7_and_create_your_first_rest_api.md)
   * [Create your Cloud server](chapter_7/create_your_cloud_server.md)
   * [Design and implement a Restful API that works](chapter_7/design_and_implement_a_restful_api_that_works.md)
-* [appendix](appendix.md)
-  * [Programming Types](appendix/programming-types.md)
+* [Chapter 0 What is this book](chapter-0-what-is-this-book.md)
 
