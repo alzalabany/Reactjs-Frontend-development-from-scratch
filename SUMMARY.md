@@ -65,5 +65,6 @@
   * [Setup PHP7 And create your first Rest API](chapter_7/setup_php7_and_create_your_first_rest_api.md)
   * [Create your Cloud server](chapter_7/create_your_cloud_server.md)
   * [Design and implement a Restful API that works](chapter_7/design_and_implement_a_restful_api_that_works.md)
-* [Chapter 0 What is this book](chapter-0-what-is-this-book.md)
+
+
 
