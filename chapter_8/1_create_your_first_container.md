@@ -98,7 +98,7 @@ docker run --name chat-volume -d -it -v /root/AmrPlayground/Docker/tester/node:/
 lets break it down:
 - "-v \<host-dir:container-dir\>" -v is used before specifying a volume, then I used my working dir and created a folder "node" for the data. To specify the contaienr dir you need to read about the image you are using in my case this one [docker node](https://github.com/nodejs/docker-node/blob/master/README.md#how-to-use-this-image)
 
-**Pro tip:** we can use $PWD place holder
+>**Pro tip:** we can use $PWD place holder
 ```bash
 docker run --name chat-volume -d -it -v "$PWD/node":/home/node/app  node:latest
 ```
