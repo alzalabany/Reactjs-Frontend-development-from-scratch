@@ -65,6 +65,9 @@
   * [Setup PHP7 And create your first Rest API](chapter_7/setup_php7_and_create_your_first_rest_api.md)
   * [Create your Cloud server](chapter_7/create_your_cloud_server.md)
   * [Design and implement a Restful API that works](chapter_7/design_and_implement_a_restful_api_that_works.md)
+* [Chapter 8 DevOps and environments](chapter_8/README.md)
+  * [Your first container](chapter_8/1_create_your_first_container.md)
+    
 * AngularJs
   * About Angularjs
   * [Angular vs AngularJs](pros-and-cons-of-angular-v1.md)
