@@ -104,7 +104,7 @@ docker run --name chat-volume -d -it -v "$PWD/node":/home/node/app  node:latest
 ```
 Output:
 
-![volume1](./assets/dockervolume1.png)
+![volume1](./assets/dockerVolume1.png)
 
 
 Exercise:
