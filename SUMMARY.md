@@ -66,7 +66,7 @@
   * [Create your Cloud server](chapter_7/create_your_cloud_server.md)
   * [Design and implement a Restful API that works](chapter_7/design_and_implement_a_restful_api_that_works.md)
 * [Chapter 8 DevOps and environments](chapter_8/README.md)
-  * [Why, how and what is docker](chapter_8/What_is_a_container.md)
+  * [Why, how and what is a container](chapter_8/What_is_a_container.md)
   * [Standardize working enviroment](chapter_8/create_your_first_container.md)
     
 * AngularJs
@@ -75,4 +75,4 @@
 
 * [Containers](chapter_8/README.md)
   * [Standardize working enviroment](chapter_8/create_your_first_container.md)
-  * [Why, how and what is docker](chapter_8/What_is_a_container.md)
+  * [Why, how and what is a container](chapter_8/What_is_a_container.md)
