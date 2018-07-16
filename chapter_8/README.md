@@ -1,16 +1,7 @@
-# Chapter 8 \[Containers\]  {#chapter-8-Standerizing-your-environment}
+# Chapter 8 \[Containers\]  {#chapter-8-Containers}
 
-# Standerizing your environment {#chapter-8-Standerizing-your-environment}
+## What is a container {#chapter-8-What-is-a-container}
 
+## Standerizing your environment {#chapter-8-Standerizing-your-environment}
 
-
-What is Docker 
-
-
-
-How it works
-
-why would you use it
-
-how to setup
-
+## Dockerfile and dockerignore{#chapter-8-Dockerfile-and-dockerignore}
