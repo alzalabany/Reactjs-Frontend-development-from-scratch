@@ -68,4 +68,7 @@
 * AngularJs
   * About Angularjs
   * [Angular vs AngularJs](pros-and-cons-of-angular-v1.md)
+* [Containers](chapter_8/README.md)
+  * [Standardize working enviroment](chapter_8/1_create_your_first_container.md)
+* [Why and how docker](why-and-how-docker.md)
 

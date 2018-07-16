@@ -16,6 +16,7 @@ By end of this book you will:-
 * hands on Backend NodeJs web Api
 * hands on MySql database design and basics
 * hands on Php development
+* hands on Docker
 
 
 
