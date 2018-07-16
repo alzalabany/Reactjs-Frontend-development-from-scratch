@@ -3,3 +3,5 @@
 ## What is a container {#chapter-8-What-is-a-container}
 
 ## Standerizing your environment {#chapter-8-Standerizing-your-environment}
+
+## Dockerfile and dockerignore{#chapter-8-Dockerfile-and-dockerignore}

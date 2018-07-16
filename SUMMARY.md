@@ -68,6 +68,7 @@
 * [Chapter 8 DevOps and environments](chapter_8/README.md)
   * [Why, how and what is a container](chapter_8/What_is_a_container.md)
   * [Standardize working enviroment](chapter_8/create_your_first_container.md)
+  * [Dockerfile and dockerignore](chapter_8/dockerfile_and_dockerignore.md)
     
 * AngularJs
   * About Angularjs
@@ -76,3 +77,4 @@
 * [Containers](chapter_8/README.md)
   * [Standardize working enviroment](chapter_8/create_your_first_container.md)
   * [Why, how and what is a container](chapter_8/What_is_a_container.md)
+  * [Dockerfile and dockerignore](chapter_8/dockerfile_and_dockerignore.md)
