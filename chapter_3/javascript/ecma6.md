@@ -2,6 +2,8 @@
 
 in this chapter we will be talking about new concepts that was introduced in new version of javascript 2017
 
+#### Moduler systems & CommonJs
+
 #### Higher-order functions
 
 #### JavaScript Arrays in Depth \(Map\)
