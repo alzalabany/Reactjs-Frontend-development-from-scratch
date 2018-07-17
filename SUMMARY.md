@@ -26,6 +26,7 @@
   * [JSX](chapter_3/jsx.md)
   * [JavaScript](chapter_3/javascript.md)
     * [ECMA6](chapter_3/javascript/ecma6.md)
+      * [Modules Systems](chapter_3/javascript/ecma6/modules.md)
       * [Higher-order functions](chapter_3/javascript/ecma6/higher_order_functions.md)
       * [JavaScript Arrays in Depth](chapter_3/javascript/ecma6/arrays_in_depth.md)
       * [Reduce Data with Javascript Array](chapter_3/javascript/ecma6/reduce_data.md)
