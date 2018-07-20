@@ -23,7 +23,6 @@
 * [Chapter 3 Languages you need to know](chapter_3/README.md)
   * [HTML](chapter_3/html.md)
   * [CSS](chapter_3/css.md)
-  * [JSX](chapter_3/jsx.md)
   * [JavaScript](chapter_3/javascript.md)
     * [ECMA6](chapter_3/javascript/ecma6.md)
       * [Modules Systems](chapter_3/javascript/ecma6/modules.md)
@@ -35,6 +34,19 @@
       * [Recursion](chapter_3/javascript/ecma6/recursion.md)
       * [Promises](chapter_3/javascript/ecma6/promises.md)
       * [ES6/ES7 syntax](chapter_3/javascript/ecma6/syntax.md)
+   * [ReactJs](chapter_3/jsx.md)
+     * JSX, Why, and React Eco-system
+     * React and JavaScript Classes
+     * Arrow Functions in React
+     * Functions as Components in React
+     * React Class Component Syntax
+     * Map, Reduce and Filter in React
+     * var, let, and const in React
+     * Ternary Operator in React
+     * Import and Export Statements in React
+     * Libraries in React
+     * Higher-Order Functions in React
+     * Destructuring and Spread Operators in React
   * [NodeJS](chapter_3/nodejs.md)
     * [Create backend server with Express](chapter_3/nodejs/express.md)
   * [PHP 7](chapter_3/php_7.md)
