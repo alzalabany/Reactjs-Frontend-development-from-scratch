@@ -20,6 +20,8 @@
   * [GIT and Version Control \[concept, installation, usage of Git\]](chapter_3/git.md)
   * [SSH \[concept, setup\]](chapter_3/ssh_[concept,_setup].md)
   * [Cloud vs Hosting \[shared, dedicated\]](chapter_3/cloud_vs_hosting_[shared,_dedicated].md)
+  * [Containers](chapter_2/Containers.md)
+  
 * [Chapter 3 Languages you need to know](chapter_3/README.md)
   * [HTML](chapter_3/html.md)
   * [CSS](chapter_3/css.md)
