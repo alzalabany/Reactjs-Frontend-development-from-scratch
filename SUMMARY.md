@@ -27,6 +27,13 @@
     * [Dockerfile and dockerignore](chapter_8/dockerfile_and_dockerignore.md)
   
 * [Chapter 3 Languages you need to know](chapter_3/README.md)
+  * Paradigms of Programing
+    * Functional Programming
+      * Concept
+      * Purity and access rights
+      * Composition *- high order functions*
+      * iteration
+      * mutation & immutability
   * [HTML](chapter_3/html.md)
   * [CSS](chapter_3/css.md)
   * [JavaScript](chapter_3/javascript.md)
